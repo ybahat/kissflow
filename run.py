@@ -22,7 +22,7 @@ def hello_world_post():
     # }
 
     # r = requests.post(url, data=json.dumps(payload), headers=headers)
-    return request.data.count()
+    return request.data.count() + " request params supplied. " + params
 
 
 
