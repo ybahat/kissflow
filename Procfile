@@ -1,1 +1,1 @@
-web: gunicorn run:my_awesome_app
+web: gunicorn run:planner_patch_app
