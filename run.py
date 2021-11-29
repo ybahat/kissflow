@@ -4,13 +4,13 @@ planner_patch_app = Flask(__name__)
 
 
 @planner_patch_app.route('/', methods=['POST'])
-def hello_world():
+def hello_world_post():
     params = request.get_json()
     return jsonify(params)
 
 
 @planner_patch_app.route('/', methods=['GET'])
-def hello_world():
+def hello_world_get():
     return 'Hello World!'
 
 
