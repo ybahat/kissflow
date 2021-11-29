@@ -22,7 +22,7 @@ def hello_world_post():
     # }
 
     # r = requests.post(url, data=json.dumps(payload), headers=headers)
-    return str(len(params)) + " request params supplied. " + str(params)
+    return jsonify({"result" : str(len(params)) + " request params supplied. " + str(params)})
 
 
 
