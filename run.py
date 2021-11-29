@@ -9,7 +9,7 @@ def hello_world():
     return jsonify(params)
 
 
-@my_awesome_app.route('/')
+@my_awesome_app.route('/', methods=['GET'])
 def hello_world():
     return 'Hello World!'
 
