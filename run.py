@@ -9,12 +9,11 @@ planner_patch_app = Flask(__name__)
 def hello_world_post():
     params = request.get_json()
 
-    # headers = {
-    #      "Authorization": params["AuthorizationToken"],
-    #      "If-Match": params["IfMatch"]
-    #
-    # }
-    #
+    headers = {
+         "Authorization": params["AuthorizationToken"],
+         "If-Match": params["IfMatch"]
+    }
+
     # url = "https://graph.microsoft.com/v1.0/planner/tasks/" + params["TaskId"] + "/details"
     #
     # payload = {
