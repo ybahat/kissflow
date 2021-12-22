@@ -10,18 +10,18 @@ def hello_world_post():
     params = request.get_json()
 
     headers = {
-         "Authorization": params["AuthorizationToken"],
-         "If-Match": params["IfMatch"]
+         "Authorization": params["Authorization"],
+         "If-Match": params["If-Match"]
     }
 
-    # url = "https://graph.microsoft.com/v1.0/planner/tasks/" + params["TaskId"] + "/details"
-    #
-    # payload = {
-    #     "description" : params["description"]
-    # }
+    url = "https://graph.microsoft.com/v1.0/planner/tasks/" + params["TaskId"] + "/details"
 
-    #r = requests.post(url, data=json.dumps(payload), headers=headers)
-    return jsonify({"result" : str(len(params)) + " request params supplied. " + str(params)})
+    payload = {
+        "description" : params["description"]
+    }
+
+    r = requests.post(url, data=json.dumps(payload), headers=headers)
+    return jsonify({"result": str(len(params)) + " request params supplied. " + str(params)})
 
 
 
@@ -31,4 +31,5 @@ def hello_world_get():
 
 
 if __name__ == '__main__':
+    planner_patch_app.debug = True
     planner_patch_app.run()
