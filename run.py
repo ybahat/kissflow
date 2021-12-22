@@ -21,9 +21,9 @@ def hello_world_post():
         "description" : params["description"]
     }
 
-    return jsonify({"url=" + url + "data=" + json.dumps(payload) + "headers=" + json.dumps(headers))
+    #return jsonify({"url=" + url + "data=" + json.dumps(payload) + "headers=" + json.dumps(headers))
     #r = requests.post(url, data=json.dumps(payload), headers=headers)
-    #return jsonify({"result" : str(len(params)) + " request params supplied. " + str(params)})
+    return jsonify({"result" : str(len(params)) + " request params supplied. " + str(params)})
 
 
 
