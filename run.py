@@ -11,7 +11,8 @@ def hello_world_post():
 
     headers = {
          "Authorization": params["Authorization"],
-         "If-Match": params["If-Match"]
+         "If-Match": params["If-Match"],
+         "Content-type": "application/json"
     }
 
     url = "https://graph.microsoft.com/v1.0/planner/tasks/" + params["TaskId"] + "/details"
